@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"/>
+
+
+    <bean id="view" class="org.person.interview.calculator.view.CommandView" />
+    <bean id="expressionParser" class = "org.person.interview.calculator.ExpressionParser" />
+    <bean id="operationItemFactory" class = "org.person.interview.calculator.factory.OperationItemFactory" />
+    <bean id="operationLogFactory" class ="org.person.interview.calculator.factory.OperationLogFactory" />
+    <bean id="configuration" class = "org.person.interview.calculator.config.Configuration" />
+    <bean id ="rpnCalculator" class = "org.person.interview.calculator.RpnCalculator" />
+
+    <bean id="controller" class="org.person.interview.calculator.Controller" />
+
+</beans>
